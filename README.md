@@ -326,9 +326,9 @@ classDiagram
     Cliente ||--o{ Mascota : "posee"
     Mascota ||--|| HistorialClinico : "tiene"
     HistorialClinico ||--o{ DetalleHistorial : "contiene"
-    HistorialClinico }o--o{ Enfermedad : "padece"
-    HistorialClinico }o--o{ Vacuna : "recibe"
-    HistorialClinico }o--o{ Cirugia : "requiere"
+    HistorialClinico ||--o{ Enfermedad : "padece"
+    HistorialClinico ||--o{ Vacuna : "recibe"
+    HistorialClinico ||--o{ Cirugia : "requiere"
     Enfermedad ||--o{ DetalleEnfermedad : "detalle"
     Vacuna ||--o{ DetalleVacuna : "detalle"
     Cirugia ||--o{ DetalleCirugia : "detalle"
@@ -369,8 +369,8 @@ classDiagram
     }
 
     %% Relaciones del sistema de permisos
-    User }o--o{ Role : "tiene"
-    Role }o--o{ Permission : "otorga"
+    User ||--o{ Role : "tiene"
+    Role ||--o{ Permission : "otorga"
     Role ||--o{ ModelHasRoles : "through"
     Permission ||--o{ RoleHasPermissions : "through"
     
