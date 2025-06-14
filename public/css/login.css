@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,100;1,600&display=swap');
+
+body {
+    background-image: url(/images/login/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.encabezadoSombra {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.textoEncabezado {
+    background-color: #ff8882;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0.2rem 2rem;
+}
+
+.encabezado {
+    background-color: #ff8882;
+    background-image: url(/images/login/encabezado.png);
+    background-repeat: no-repeat;
+    height: 80px;
+    bottom: 0px;
+    width: 100%;
+}
+
+/*funcion boostrap crea un cuadrado en medio de la pantalla dado parametros en css*/
+.container {
+    position: absolute;
+    max-width: 1000px;
+    height: 500px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rectanguloDerecho {
+    position: relative;
+    background: #ff8882;
+    border-radius: 10px;
+    height: 100%;
+    padding: 25px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/login/welcome.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.rectanguloIzquierdo {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    height: 100%;
+    padding: 25px;
+    padding-left: 50px;
+}
+
+.row {
+    height: 100%;
+}
+
+.rectanguloGrande {
+    position: relative;
+    background: #fff;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.textIniciarSesion {
+    position: absolute;
+
+    color: #545454;
+    font-size: 24px;
+    font-weight: 700;
+
+    position: relative;
+    /* margen con el de arriba */
+    margin-top: 40px;
+}
+
+.email,
+.contraseña {
+    color: black;
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.buttonIniciarSesion {
+    font-size: 20px;
+    font-weight: 700;
+
+    width: 250px;
+    padding: 13px;
+
+    /* margen con el de arriba*/
+    margin-top: 40px;
+
+    /* centrando el boton */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* sombreado de los botones , color de letra , borde y color del contorno*/
+.buttonIniciarSesion {
+    /* color contorno*/
+    background: #ff8882;
+    /* color de la letra*/
+    color: #fff;
+    /* sombreado*/
+    box-shadow: 0px 10px 20px #ff8882;
+    /*borde*/
+    border-radius: 10px;
+    border: none;
+}
+
+.myInput {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 3px solid #ff8882;
+    margin-top: 10px;
+    outline: 0px;
+}
+
+.texto {
+    margin-top: 25px;
+}
+
+.texto1 {
+    margin-top: 10px;
+}
