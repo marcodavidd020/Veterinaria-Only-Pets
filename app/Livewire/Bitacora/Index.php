@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Bitacora;
+namespace App\Livewire\Bitacora;
 
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -26,7 +26,6 @@ class Index extends Component
         $this->orderable = (new Accion())->orderable;
     }
 
-
     public function render()
     {
         $query = Accion::with(['persona'])->advancedFilter([
@@ -35,9 +34,8 @@ class Index extends Component
             'order_direction' => 'desc',
         ]);
 
-
         $acciones = $query->paginate(10);
 
         return view('livewire.bitacora.index', compact('acciones'));
     }
-}
+} 

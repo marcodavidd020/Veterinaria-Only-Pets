@@ -320,18 +320,18 @@ classDiagram
     }
 
     %% Relaciones
-    User ||--|| Persona : tiene
-    Persona ||--o| Cliente : puede_ser
-    Persona ||--o| Veterinario : puede_ser
-    Cliente ||--o{ Mascota : posee
-    Mascota ||--|| HistorialClinico : tiene
-    HistorialClinico ||--o{ DetalleHistorial : contiene
-    HistorialClinico }o--o{ Enfermedad : padece
-    HistorialClinico }o--o{ Vacuna : recibe
-    HistorialClinico }o--o{ Cirugia : requiere
-    Enfermedad ||--o{ DetalleEnfermedad : detalle
-    Vacuna ||--o{ DetalleVacuna : detalle
-    Cirugia ||--o{ DetalleCirugia : detalle
+    User ||--|| Persona : "tiene"
+    Persona ||--o| Cliente : "puede_ser"
+    Persona ||--o| Veterinario : "puede_ser"
+    Cliente ||--o{ Mascota : "posee"
+    Mascota ||--|| HistorialClinico : "tiene"
+    HistorialClinico ||--o{ DetalleHistorial : "contiene"
+    HistorialClinico }o--o{ Enfermedad : "padece"
+    HistorialClinico }o--o{ Vacuna : "recibe"
+    HistorialClinico }o--o{ Cirugia : "requiere"
+    Enfermedad ||--o{ DetalleEnfermedad : "detalle"
+    Vacuna ||--o{ DetalleVacuna : "detalle"
+    Cirugia ||--o{ DetalleCirugia : "detalle"
 ```
 
 ### 🏗️ Diagrama de Clases - Sistema de Roles y Permisos
@@ -369,10 +369,10 @@ classDiagram
     }
 
     %% Relaciones del sistema de permisos
-    User }o--o{ Role : tiene
-    Role }o--o{ Permission : otorga
-    Role ||--o{ ModelHasRoles : through
-    Permission ||--o{ RoleHasPermissions : through
+    User }o--o{ Role : "tiene"
+    Role }o--o{ Permission : "otorga"
+    Role ||--o{ ModelHasRoles : "through"
+    Permission ||--o{ RoleHasPermissions : "through"
     
     note for Role "Roles: super-admin, recepcionista,<br/>veterinario, cliente, supervisor"
     note for Permission "Permisos: usuarios.index, usuarios.create,<br/>mascotas.index, historiales.edit, etc."
