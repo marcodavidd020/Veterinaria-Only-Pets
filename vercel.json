@@ -70,7 +70,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://veterinaria-ony-pets.vercel.app",
+        "APP_URL": "https://veterinaria-only-pets.vercel.app",
+        "FORCE_HTTPS": "true",
 
         
         "APP_CONFIG_CACHE": "/tmp/config.php",
