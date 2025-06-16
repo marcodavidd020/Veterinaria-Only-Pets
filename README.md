@@ -320,18 +320,18 @@ classDiagram
     }
 
     %% Relaciones
-    User ||--|| Persona : "tiene"
-    Persona ||--o| Cliente : "puede_ser"
-    Persona ||--o| Veterinario : "puede_ser"
-    Cliente ||--o{ Mascota : "posee"
-    Mascota ||--|| HistorialClinico : "tiene"
-    HistorialClinico ||--o{ DetalleHistorial : "contiene"
-    HistorialClinico ||--o{ Enfermedad : "padece"
-    HistorialClinico ||--o{ Vacuna : "recibe"
-    HistorialClinico ||--o{ Cirugia : "requiere"
-    Enfermedad ||--o{ DetalleEnfermedad : "detalle"
-    Vacuna ||--o{ DetalleVacuna : "detalle"
-    Cirugia ||--o{ DetalleCirugia : "detalle"
+    User -- Persona : "tiene"
+    Persona -- Cliente : "puede_ser"
+    Persona -- Veterinario : "puede_ser"
+    Cliente --> Mascota : "posee"
+    Mascota -- HistorialClinico : "tiene"
+    HistorialClinico --> DetalleHistorial : "contiene"
+    HistorialClinico --> Enfermedad : "padece"
+    HistorialClinico --> Vacuna : "recibe"
+    HistorialClinico --> Cirugia : "requiere"
+    Enfermedad --> DetalleEnfermedad : "detalle"
+    Vacuna --> DetalleVacuna : "detalle"
+    Cirugia --> DetalleCirugia : "detalle"
 ```
 
 ### 🏗️ Diagrama de Clases - Sistema de Roles y Permisos
@@ -368,12 +368,12 @@ classDiagram
         +role_id: int
     }
 
-    %% Relaciones del sistema de permisos
-    User ||--o{ Role : "tiene"
-    Role ||--o{ Permission : "otorga"
-    Role ||--o{ ModelHasRoles : "through"
-    Permission ||--o{ RoleHasPermissions : "through"
-    
+    %% Relaciones del sistema de permisos (conectores soportados)
+    User -- Role : "tiene"
+    Role -- Permission : "otorga"
+    Role --> ModelHasRoles : "through"
+    Permission --> RoleHasPermissions : "through"
+
     note for Role "Roles: super-admin, recepcionista,<br/>veterinario, cliente, supervisor"
     note for Permission "Permisos: usuarios.index, usuarios.create,<br/>mascotas.index, historiales.edit, etc."
 ```
@@ -391,7 +391,7 @@ classDiagram
 
 1. **Clonar el repositorio**
 ```bash
-git clone [url-del-repositorio]
+git clone https://github.com/marcodavidd020/Veterinaria-Only-Pets.git
 cd Proyecto_SI1-Veterinaria-Only-Pets
 ```
 
